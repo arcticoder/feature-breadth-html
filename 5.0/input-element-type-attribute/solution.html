@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><input> Element - new values for the type attribute</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#searchButton').click(function () {
+                searchHandler($('#searchField').val());
+            });
+        });
+
+        function searchHandler(input) {
+            console.log("The current value of the search field is\n" + input);
+        }
+    </script>
+</head>
+
+<body>
+Search: <input id="searchField" type="search" placeholder="search" results="3" incremental="true" onsearch="searchHandler(this.value)" autofocus/>
+<button id="searchButton">Search</button>
+</body>
+</html>
